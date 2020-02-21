@@ -10,14 +10,11 @@ public class User {
 	private String nickName;		//昵称
 	private String passWord;		//密码
 	private String photoString; //头像文件名
-	private List<String> permissions;//权限列表
 	
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
-	
 	
 	public User(int id, String nickName, String passWord, String photoString) {
 		super();
@@ -26,22 +23,12 @@ public class User {
 		this.passWord = passWord;
 		this.photoString = photoString;
 	}
-
-
-
+	
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", userName=" + userName + ", nickName=" + nickName + ", passWord=" + passWord
-				+ ", photoString=" + photoString + ", permissions=" + permissions + "]";
+				+ ", photoString=" + photoString;
 	}
-
-
-
-	public List<String> getPermissions() {
-		return permissions;
-	}
-
-
 
 	public User(String userName, String nickName, String passWord, String photoString) {
 		super();
@@ -51,21 +38,11 @@ public class User {
 		this.photoString = photoString;
 	}
 
-
-
-	public void setPermissions(List<String> permissions) {
-		this.permissions = permissions;
-	}
-
-
-
 	public User(String userName, String passWord) {
 		super();
 		this.userName = userName;
 		this.passWord = passWord;
 	}
-
-
 
 	public User(int id, String userName, String nickName, String passWord, String photoString) {
 		super();
@@ -107,6 +84,4 @@ public class User {
 	public void setPhotoString(String photoString) {
 		this.photoString = photoString;
 	}
-	
-	
 }

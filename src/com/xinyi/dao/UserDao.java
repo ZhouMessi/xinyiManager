@@ -29,21 +29,6 @@ public class UserDao {
 			resultUser.setPhotoString(resultSet.getString("photoString"));
 		}
 		
-		
-		if(resultUser != null) {
-			List<String> permissionList = new ArrayList<String>();	
-			String pListSql = "SELECT t2.permissionName pList from t_user_permission t1"
-					+ " LEFT JOIN t_permission t2 on t1.permissionId = t2.id "
-					+ "LEFT JOIN t_user t3 on  t1.userId = t3.id where t3.id = ?";
-			PreparedStatement preparedStatement2 = connection.prepareStatement(pListSql);
-			preparedStatement2.setInt(1, resultUser.getId());
-			ResultSet rSet = preparedStatement2.executeQuery();
-			while (rSet.next()) {
-				permissionList.add(rSet.getString("pList"));
-			}
-			resultUser.setPermissions(permissionList);
-		}
-		
 		return resultUser;	
 	}
 
