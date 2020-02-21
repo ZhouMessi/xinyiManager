@@ -270,6 +270,10 @@ public class permissionSet extends JInternalFrame {
 	private void addcurrentUserPermission() {
 		 // 获取所有被选中的选项索引
         int[] indices = addPermissionList.getSelectedIndices();
+        if(indices.length ==0) {
+        	JOptionPane.showMessageDialog(this, "请至少选择一条");
+        	return;
+        }
      // 获取选项数据的 ListModel
         ListModel<permission> listModel = addPermissionList.getModel();
         List<permission>permissions =new ArrayList<permission>();
@@ -300,6 +304,11 @@ public class permissionSet extends JInternalFrame {
 	private void removeCurrentUserPermission() {
 		 // 获取所有被选中的选项索引
         int[] indices = list.getSelectedIndices();
+        if(indices.length ==0) {
+        	JOptionPane.showMessageDialog(this, "请至少选择一条");
+        	return;
+        }
+
         List<permission>permissions =new ArrayList<permission>();
      // 获取选项数据的 ListModel
         ListModel<permission> listModel = list.getModel();

@@ -76,7 +76,7 @@ public class permissionDao {
 	}
 
 	public int addCurrentUserPermission(Connection connection, String userIdString, List<permission> permissions) throws Exception {
-		String sql = "insert into t_user_permission values(null,+"+userIdString+",?)";
+		String sql = "insert into t_user_permission values(null,"+userIdString+",?)";
 		int i=0;
 		for (int j = 0; j < permissions.size(); j++) {
 			PreparedStatement psmt = connection.prepareStatement(sql);
