@@ -12,10 +12,22 @@ import javax.swing.UIManager;
 
 import com.xinyi.common.xinyiConstant;
 import com.xinyi.menuView.permissionSet;
+import com.xinyi.permissionManager.NoLogin;
+import com.xinyi.permissionManager.jumpButton;
+import com.xinyi.permissionManager.menuFunction;
 
-public class customCAIDAN extends JMenuBar {
+public class customCAIDAN extends JMenuBar implements menuFunction{
 	private MainFrm jf;
+	private menuFunction menuFunction;//代理类
 	
+	public menuFunction getMenuFunction() {
+		return menuFunction;
+	}
+
+	public void setMenuFunction(menuFunction menuFunction) {
+		this.menuFunction = menuFunction;
+	}
+
 	public customCAIDAN() {
 		JMenu menu = new JMenu("订单");
 		menu.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
@@ -61,7 +73,7 @@ public class customCAIDAN extends JMenuBar {
 		JMenuItem permissionSet = new JMenuItem("分配权限");
 		permissionSet.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				permissionSet();
+				menuFunction.permissionSet();
 			}
 		});
 			
@@ -74,7 +86,10 @@ public class customCAIDAN extends JMenuBar {
 	}
 
 	//分配权限
-	private void permissionSet() {
+
+	@Override
+	@NoLogin("admin")
+	public void permissionSet() {
 		com.xinyi.menuView.permissionSet permissionSet = new permissionSet();
 		permissionSet.setVisible(true);
 		this.jf.getDesktopPane().add(permissionSet);
@@ -108,6 +123,6 @@ public class customCAIDAN extends JMenuBar {
 	public void setJf(MainFrm jf) {
 		this.jf = jf;
 	}
-	
+
 	
 }

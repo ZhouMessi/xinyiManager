@@ -252,7 +252,7 @@ public class logonPage extends JFrame {
 		//登录
 		private void Login2() {
 			// TODO Auto-generated method stub
-			String userNameString = "zhouzhou";
+			String userNameString = "java";
 			String passWordString = "1";
 			
 			if(StringUtil.isEmpty(userNameString)) {
