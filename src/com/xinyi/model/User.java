@@ -1,14 +1,24 @@
 package com.xinyi.model;
 
-import java.util.List;
+import com.xinyi.daoManager.Parameter;
+import com.xinyi.daoManager.Table;
 
-import javax.sound.sampled.LineListener;
-
+@Table(TableName = "t_user")
 public class User {
+	
+	@Parameter(name = "id")
 	private int id;						//id
+	
+	@Parameter(name = "userName")
 	private String userName;	//用户名
+	
+	@Parameter(name = "nickName")
 	private String nickName;		//昵称
+	
+	@Parameter(name = "passWord")
 	private String passWord;		//密码
+	
+	@Parameter(name = "photoString")
 	private String photoString; //头像文件名
 	
 	public User() {

@@ -53,7 +53,8 @@ public class orderDetail extends JInternalFrame {
 	 * Create the frame.
 	 * @throws Exception 
 	 */
-	public orderDetail() {	
+	public orderDetail() {
+		setMaximizable(true);	
 		try {
 			setFrameIcon(new ImageIcon(orderDetail.class.getResource("/images/mainFrm/menu/orderDetailIcon.png")));
 			setIconifiable(true);

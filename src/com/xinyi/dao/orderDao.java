@@ -1,18 +1,10 @@
 package com.xinyi.dao;
 
-import java.security.Timestamp;
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.HashMap;
-import java.util.Map;
-
-import javax.swing.JOptionPane;
-
 import com.xinyi.common.dateCommon;
-import com.xinyi.common.xinyiConstant;
 import com.xinyi.model.PageInfo;
 import com.xinyi.model.order;
 import com.xinyi.model.orderBarChartModel;
