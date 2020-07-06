@@ -35,8 +35,7 @@ public class jdbcUtil {
 		Connection connection =null;
 		List<String> permissionList = new ArrayList<String>();	
 		try {
-			connection =jdbcUtil.getCon();
-			
+			connection =jdbcUtil.getCon();			
 			String pListSql = "SELECT t2.permissionName pList from t_user_permission t1"
 					+ " LEFT JOIN t_permission t2 on t1.permissionId = t2.id "
 					+ "LEFT JOIN t_user t3 on  t1.userId = t3.id where t3.id = ?";

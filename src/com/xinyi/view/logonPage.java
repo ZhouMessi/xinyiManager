@@ -84,7 +84,7 @@ public class logonPage extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("鑫亿发鞋材信息管理系统");
 		lblNewLabel.setForeground(new Color(0, 0, 255));
-		lblNewLabel.setFont(new Font("微软雅黑", Font.BOLD, 45));
+		lblNewLabel.setFont(new Font("幼圆", Font.BOLD, 45));
 		
 		JLabel userName = new JLabel("用户名:");
 		userName.setIcon(new ImageIcon(logonPage.class.getResource("/images/logonPage/userName.png")));

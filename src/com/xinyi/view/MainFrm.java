@@ -82,9 +82,9 @@ public class MainFrm extends JFrame {
 		setIconImage(Toolkit.getDefaultToolkit().getImage(MainFrm.class
 				.getResource("/images/nextapp_systempanel_ui_homeactivity_24px_1135522_easyicon.net.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(0, 0, 1505, 773);
+		setBounds(0, 0, 1920, 1080);
 		// 设置全屏
-		this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+//		this.setExtendedState(JFrame.MAXIMIZED_BOTH);
 
 		getContentPane().add(splitPaneMain, BorderLayout.CENTER);
 		getDesktopPane().setBackground(Color.CYAN);

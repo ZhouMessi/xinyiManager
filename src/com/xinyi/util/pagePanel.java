@@ -47,7 +47,7 @@ public class pagePanel extends JPanel{
 		setLayout(new GridLayout(1, 5));
 		
 		firstPageButton = new JButton("首页");
-		firstPageButton.setFont(new Font("微软雅黑", Font.BOLD, 18));
+		firstPageButton.setFont(new Font("幼圆", Font.BOLD, 18));
 		
 		firstPageButton.addActionListener(new ActionListener() {	
 			@Override
@@ -62,10 +62,10 @@ public class pagePanel extends JPanel{
 				paging(e);
 			}
 		});
-		prevPageButton.setFont(new Font("微软雅黑", Font.BOLD, 18));
+		prevPageButton.setFont(new Font("幼圆", Font.BOLD, 18));
         
 		currentPageField = new JTextField();
-		currentPageField.setFont(new Font("微软雅黑", Font.BOLD, 18));
+		currentPageField.setFont(new Font("幼圆", Font.BOLD, 18));
         
 		jumpPageButton = new JButton("跳页");
 		jumpPageButton.addActionListener(new ActionListener() {
@@ -74,7 +74,7 @@ public class pagePanel extends JPanel{
 			}
 		});
 		
-		jumpPageButton.setFont(new Font("微软雅黑", Font.BOLD, 18));
+		jumpPageButton.setFont(new Font("幼圆", Font.BOLD, 18));
         
 		nextPageButton = new JButton("下一页");
 		nextPageButton.addActionListener(new ActionListener() {
@@ -83,7 +83,7 @@ public class pagePanel extends JPanel{
 			}
 		});
 		
-		nextPageButton.setFont(new Font("微软雅黑", Font.BOLD, 18));
+		nextPageButton.setFont(new Font("幼圆", Font.BOLD, 18));
 		
 		
         
@@ -93,7 +93,7 @@ public class pagePanel extends JPanel{
 				paging(e);
 			}
 		});
-		LastPageButton.setFont(new Font("微软雅黑", Font.BOLD, 18));
+		LastPageButton.setFont(new Font("幼圆", Font.BOLD, 18));
 		
 		JLabel jLabel1 = new JLabel(" 总页数: ");
 		jLabel1.setFont(new Font("宋体", Font.BOLD, 18));
@@ -103,13 +103,13 @@ public class pagePanel extends JPanel{
 		
 		totalPages = new JTextField();
 		totalPages.setEditable(false);
-		totalPages.setFont(new Font("微软雅黑", Font.BOLD, 18));       
+		totalPages.setFont(new Font("幼圆", Font.BOLD, 18));       
 		totalPages.setForeground(Color.RED);
 		totalPages.setText("1");
         
 		totalRows = new JTextField();
 		totalRows.setEditable(false);
-		totalRows.setFont(new Font("微软雅黑", Font.BOLD, 18));	  
+		totalRows.setFont(new Font("幼圆", Font.BOLD, 18));	  
 		totalRows.setForeground(Color.RED);
 		totalRows.setText("1");
         

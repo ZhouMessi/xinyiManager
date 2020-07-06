@@ -7,4 +7,6 @@ public interface jumpButton {
 	void orderSearch();
 	
 	void orderStatistics();
+
+	void deliveryAdd();
 }

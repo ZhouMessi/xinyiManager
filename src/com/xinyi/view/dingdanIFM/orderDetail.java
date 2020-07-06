@@ -64,7 +64,7 @@ public class orderDetail extends JInternalFrame {
 			e.printStackTrace();
 		}
 		setTitle("订单详情");
-		setBounds(50, 50, 1200, 800);
+		setBounds(0, 0, 1200, 1200);
 		
 		// 创建选项卡面板
 		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.LEFT);

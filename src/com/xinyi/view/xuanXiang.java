@@ -12,6 +12,7 @@ import javax.swing.JPanel;
 
 import com.xinyi.permissionManager.NoLogin;
 import com.xinyi.permissionManager.jumpButton;
+import com.xinyi.view.cangkuIFM.songHuoAdd;
 import com.xinyi.view.dingdanIFM.orderAdd;
 
 import java.awt.event.ActionListener;
@@ -64,6 +65,14 @@ public class xuanXiang extends JPanel implements jumpButton{
 		JButton btn05 = new JButton("鞋类管理");
 		JButton btn06 = new JButton("员工管理");
 		JButton btn07 = new JButton("仓库管理");
+		
+		//仓库管理
+		btn07.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {			
+				storeManager();
+			}
+		});
+				
 		JButton btn08 = new JButton("退出系统");
 		btn08.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -103,6 +112,68 @@ public class xuanXiang extends JPanel implements jumpButton{
 		return jbList;	
 	}
 	
+	private void storeManager() {
+		if(jButtons.size() == 9) {
+			this.removeAll();
+			this.layout.setRows(8);
+			jButtons= initCompont();
+			for (Component jButton : jButtons) {
+				this.add( jButton);
+			}
+			this.revalidate();
+			this.repaint();
+			return;
+		}
+		
+		GridLayout	layout = new GridLayout(2, 2);
+		layout.setHgap(5);
+		layout.setVgap(5);
+		JPanel jPanel = new JPanel(layout);
+		JButton  orderButton01 = new JButton("送货单录");
+		orderButton01.setIcon(new ImageIcon(xuanXiang.class.getResource("/images/xuanxiang/songHuo.png")));
+		orderButton01.setFont(new Font("微软雅黑", Font.BOLD, 16));
+		orderButton01.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {	
+				jumpButton.deliveryAdd();
+			}
+		});
+		
+		JButton  orderButton02 = new JButton("订单录入");
+		orderButton02.setIcon(new ImageIcon(xuanXiang.class.getResource("/images/xuanxiang/order_add.png")));
+		orderButton02.setFont(new Font("微软雅黑", Font.BOLD, 16));
+		orderButton02.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				jumpButton.orderAdd();
+			}
+		});
+		
+		JButton  orderButton03 = new JButton("订单统计");
+		orderButton03.setIcon(new ImageIcon(xuanXiang.class.getResource("/images/xuanxiang/orderTongJi.png")));
+		orderButton03.setFont(new Font("微软雅黑", Font.BOLD, 16));
+		orderButton03.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				jumpButton.orderStatistics();
+			}
+		});
+		
+		JButton  orderButton04 = new JButton("订单查询4");
+		orderButton04.setFont(new Font("微软雅黑", Font.BOLD, 16));
+		jPanel.add(orderButton01);
+		jPanel.add(orderButton02);
+		jPanel.add(orderButton03);
+		jPanel.add(orderButton04);
+		jButtons.add(7, jPanel);
+		
+		this.removeAll();
+		this.layout.setRows(9);
+		for (Component jButton : jButtons) {
+			this.add( jButton);
+		}
+		this.revalidate();
+		this.repaint();
+		
+	}
+
 	private void orderManager() {
 		if(jButtons.size() == 9) {
 			this.removeAll();
@@ -212,5 +283,13 @@ public class xuanXiang extends JPanel implements jumpButton{
 		ordersStatisticsIFM ordersStatisticsIFM = new ordersStatisticsIFM();
 		ordersStatisticsIFM.setVisible(true);
 		jf.getDesktopPane().add(ordersStatisticsIFM);
+	}
+	//送货单新增
+	@Override
+	@NoLogin(value = "deliveryAdd")
+	public void deliveryAdd() {
+		songHuoAdd songHuoAdd = new songHuoAdd();
+		songHuoAdd.setVisible(true);
+		jf.getDesktopPane().add(songHuoAdd);	
 	}	
 }

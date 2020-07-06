@@ -262,9 +262,8 @@ public class orderAdd extends JInternalFrame {
 
 		try {
 			FileUtil.copy(this, fileName, xinyiConstant.getOrdersImagePath()+"\\"+imgPath);
-		} catch (IOException e1) {
-			
-			JOptionPane.showMessageDialog(null, "图片存储异常");
+		} catch (IOException e1) {	
+		 JOptionPane.showMessageDialog(null, "图片存储异常");
 		}
 	
 		
