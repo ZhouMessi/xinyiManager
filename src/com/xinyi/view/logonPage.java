@@ -1,19 +1,16 @@
 package com.xinyi.view;
 
 import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
-
 import org.jb2011.lnf.beautyeye.BeautyEyeLNFHelper;
 import com.xinyi.dao.UserDao;
 import com.xinyi.model.User;
 import com.xinyi.util.MD5Util;
 import com.xinyi.util.StringUtil;
 import com.xinyi.util.jdbcUtil;
-
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import java.awt.Toolkit;

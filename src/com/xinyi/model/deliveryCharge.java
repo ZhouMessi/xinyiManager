@@ -18,6 +18,7 @@ public class deliveryCharge {
 		private int forty_six;//四十六
 		
 		
+		
 		public deliveryCharge(String colorRule, int thirty_six, int thirty_seven, int thirty_eight, int thirty_nine,
 				int forty, int forty_one, int forty_two, int forty_three, int forty_four, int forty_five,
 				int forty_six) {
@@ -41,6 +42,8 @@ public class deliveryCharge {
 		public void setColorRule(String colorRule) {
 			this.colorRule = colorRule;
 		}
+
+		
 		public int getThirty_six() {
 			return thirty_six;
 		}
@@ -110,6 +113,7 @@ public class deliveryCharge {
 		public deliveryCharge() {
 			super();
 			this.colorRule = "请输入颜色/规格";
+
 		}
 		public static void main(String[] args) {
 			deliveryCharge deliveryCharge = new deliveryCharge();

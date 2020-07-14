@@ -414,16 +414,16 @@ table.setFont(new Font("微软雅黑", Font.BOLD, 14));
 		} catch (IOException e1) {	
 		 JOptionPane.showMessageDialog(null, "图片存储异常");
 		}
-		songHuo songHuo = new songHuo(clientName,songhuoTime,driverString,oddNums,totalPagNums,totalCounts,reMark,imgPath,uuid);
+		songHuo songHuo = new songHuo(clientName,songhuoTime,driverString,oddNums,totalPagNums,totalCounts,reMark,imgPath,uuid,dList);
 		Connection connection = null;
 		try {
 			connection = jdbcUtil.getCon();
 		    int updateNum = songhuoDao.add(connection,songHuo);
 		    if(updateNum == 1) {
-		    	JOptionPane.showMessageDialog(null, "新增订单成功");
+		    	JOptionPane.showMessageDialog(null, "新增送货单成功");
 //		    	resetValues();
 		    }else {
-		    	JOptionPane.showMessageDialog(null, "新增订单失败");
+		    	JOptionPane.showMessageDialog(null, "新增送货单失败");
 			}
 		}catch (Exception e) {
 			// TODO: handle exception

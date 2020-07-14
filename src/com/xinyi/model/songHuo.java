@@ -1,6 +1,7 @@
 package com.xinyi.model;
 
 import java.util.Date;
+import java.util.List;
 
 public class songHuo {
 	private String clientName;//客户
@@ -12,6 +13,7 @@ public class songHuo {
 	private String remark;//备注
 	private String imagePath;//图片路径
 	private String guiGeUUID;//规格UUID
+	private List<deliveryCharge> dList;//规格
 	
 	public String getClientName() {
 		return clientName;
@@ -23,7 +25,7 @@ public class songHuo {
 		return deliveryTime;
 	}
 	public songHuo(String clientName, Date deliveryTime, String driver, String oddNums, String totalPagNums,
-			String totalCounts, String remark, String imagePath, String guiGeUUID) {
+			String totalCounts, String remark, String imagePath, String guiGeUUID,List<deliveryCharge> dList) {
 		super();
 		this.clientName = clientName;
 		this.deliveryTime = deliveryTime;
@@ -34,6 +36,13 @@ public class songHuo {
 		this.remark = remark;
 		this.imagePath = imagePath;
 		this.guiGeUUID = guiGeUUID;
+		this.dList = dList;
+	}
+	public List<deliveryCharge> getdList() {
+		return dList;
+	}
+	public void setdList(List<deliveryCharge> dList) {
+		this.dList = dList;
 	}
 	public void setDeliveryTime(Date deliveryTime) {
 		this.deliveryTime = deliveryTime;

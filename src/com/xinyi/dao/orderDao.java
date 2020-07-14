@@ -50,7 +50,8 @@ public class orderDao {
 		psmt.setTimestamp(5, new java.sql.Timestamp(new java.util.Date().getTime()));
 		psmt.setTimestamp(6,new java.sql.Timestamp(order.getShipmentTime().getTime()));
 		psmt.setString(7, order.getReMark());
-		psmt.setString(8, order.getImagePath());		
+		psmt.setString(8, order.getImagePath());
+		
 		return psmt.executeUpdate();
 	}
 

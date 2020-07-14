@@ -137,13 +137,13 @@ public class xuanXiang extends JPanel implements jumpButton{
 				jumpButton.deliveryAdd();
 			}
 		});
-		
-		JButton  orderButton02 = new JButton("订单录入");
-		orderButton02.setIcon(new ImageIcon(xuanXiang.class.getResource("/images/xuanxiang/order_add.png")));
+		//送货单查询
+		JButton  orderButton02 = new JButton("送货单查");
+		orderButton02.setIcon(new ImageIcon(xuanXiang.class.getResource("/images/xuanxiang/songHuoSearch.png")));
 		orderButton02.setFont(new Font("微软雅黑", Font.BOLD, 16));
 		orderButton02.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				jumpButton.orderAdd();
+				//jumpButton.orderAdd();
 			}
 		});
 		

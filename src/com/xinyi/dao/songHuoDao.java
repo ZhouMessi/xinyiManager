@@ -21,6 +21,29 @@ public class songHuoDao {
 		psmt.setString(8, songHuo.getRemark());
 		psmt.setString(9, songHuo.getGuiGeUUID());
 			
-		return psmt.executeUpdate();
+		
+		for (int i = 0; i < songHuo.getdList().size(); i++) {
+			String sql2 = "insert into t_deliverguige values(?,?,?,?,?,?,?,?,?,?,?,?,?)";
+			PreparedStatement psmt2 = connection.prepareStatement(sql2);
+			psmt2.setString(1, songHuo.getGuiGeUUID());
+			psmt2.setString(2, songHuo.getdList().get(i).getColorRule());
+			psmt2.setInt(3, songHuo.getdList().get(i).getThirty_six());
+			psmt2.setInt(4, songHuo.getdList().get(i).getThirty_seven());
+			psmt2.setInt(5, songHuo.getdList().get(i).getThirty_eight());
+			psmt2.setInt(6, songHuo.getdList().get(i).getThirty_nine());
+			psmt2.setInt(7, songHuo.getdList().get(i).getForty());
+			psmt2.setInt(8, songHuo.getdList().get(i).getForty_one());
+			psmt2.setInt(9, songHuo.getdList().get(i).getForty_two());
+			psmt2.setInt(10, songHuo.getdList().get(i).getForty_three());
+			psmt2.setInt(11, songHuo.getdList().get(i).getForty_four());
+			psmt2.setInt(12, songHuo.getdList().get(i).getForty_five());
+			psmt2.setInt(13, songHuo.getdList().get(i).getForty_six());
+			psmt2.executeUpdate();
+		}
+		
+		
+
+		
+		return psmt.executeUpdate();		
 	}
 }
